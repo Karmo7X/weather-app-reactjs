@@ -38,13 +38,13 @@ function App() {
       <div className='container'>
         <div className="top">
           <div className="location">
-            <p>{data.name}</p>
+            <p>{data.name} City</p>
           </div>
           <div className="temp">
-          {data.main? <h1 className='pt-4'>{data.main.temp.toFixed()}℃</h1> :null}
+          {data.main? <h1 className='pt-4'>{data.main.temp.toFixed()}Temp℃</h1> :null}
           </div>
           <div className="description">
-            {data.weather? <p className='fw-lighter pt-3'>{data.weather[0].main}</p>:null}
+            {data.weather? <p className='fw-lighter pt-3'>{data.weather[0].main}weather</p>:null}
           </div>
         </div>
 
@@ -53,16 +53,16 @@ function App() {
       {data.name !== undefined &&
         <div className="bottom">
           <div className="feels">
-           {data.main ? <p className='fw-bold'>{data.main.feels_like.toFixed()}℃</p>:null}
+           {data.main ? <p className='fw-bold'>{data.main.feels_like.toFixed()}feel like℃</p>:null}
            <p className='fw-lighter'>Feels like</p>
           </div>
           <div className="humidity">
-           {data.main ?<p className='fw-bold'>{data.main.humidity.toFixed()}%</p> :null}
+           {data.main ?<p className='fw-bold'>{data.main.humidity.toFixed()} humitidy rate %</p> :null}
             <p className='fw-lighter'>Humidity</p>
           </div>
           <div className="wind">
   
-          {data.wind?<p className='fw-bold'>{data.wind.speed.toFixed()}MPH</p> :null}
+          {data.wind?<p className='fw-bold'>{data.wind.speed.toFixed()} Speed MPH</p> :null}
             <p className='fw-lighter'>Wind Speed</p>
           </div>
         </div>
